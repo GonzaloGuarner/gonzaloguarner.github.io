@@ -1,1 +1,1 @@
-GG Gonzalo Guarner-Banares
+GG Gonzalo Guarner-Bañares
