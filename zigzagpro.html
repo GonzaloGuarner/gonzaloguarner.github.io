@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | ZigZagPro</title>
+    <title>Unity WebGL Player | ZigZagVIP</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=800 height=800></canvas>
+      <canvas id="unity-canvas" width=524 height=650></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -20,7 +20,7 @@
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">ZigZagPro</div>
+        <div id="unity-build-title">ZigZagVIP</div>
       </div>
     </div>
     <script>
@@ -63,8 +63,8 @@
         codeUrl: buildUrl + "/WebGL.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "BeaverPenguin",
-        productName: "ZigZagPro",
-        productVersion: "0.3.2",
+        productName: "ZigZagVIP",
+        productVersion: "0.3.4",
         showBanner: unityShowBanner,
       };
 
@@ -82,8 +82,8 @@
         config.devicePixelRatio = 1;
         unityShowBanner('WebGL builds are not supported on mobile devices.');
       } else {
-        canvas.style.width = "800px";
-        canvas.style.height = "800px";
+        canvas.style.width = "524px";
+        canvas.style.height = "650px";
       }
       canvas.style.background = "url('" + buildUrl + "/WebGL.jpg') center / cover";
       loadingBar.style.display = "block";
