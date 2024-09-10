@@ -10,6 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 	</head>
 	<body class="homepage is-preload">
 		<div id="page-wrapper">
@@ -216,11 +217,11 @@
 													<label for="message">Message</label>
 													<textarea id="message" name="message" required></textarea>
 												</div>
-												<input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+												<div class="g-recaptcha" data-sitekey="6Ldfaz0qAAAAALqlESrI6r6BEySsaG-xp6jd1pQ0"></div> <!-- Google reCAPTCHA -->
 												<ul class="actions">
 													<li><input type="submit" value="Send Message" class="button alt" /></li>
 												</ul>
-											</form>											
+											</form>
 										</li>
 									</ul>
 									
@@ -242,16 +243,13 @@
 		</div>
 
 		<!-- Scripts -->
-
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.dropotron.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script src="https://www.google.com/recaptcha/api.js?render=6Ldfaz0qAAAAALqlESrI6r6BEySsaG-xp6jd1pQ0"></script>
-			<script src="assets/js/recaptcha.js"></script>
-			
+
 	</body>
 </html>
 
