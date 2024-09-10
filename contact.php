@@ -3,7 +3,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = strip_tags(trim($_POST["name"]));
     $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
     $message = trim($_POST["message"]);
-    $recaptcha_secret = '6Ldfaz0qAAAAADd2IEkqA73z4xIzUdfETtdTQY-t'; // Your secret key from reCAPTCHA v3
+    
+    $recaptcha_secret = '6Ldfaz0qAAAAADd2IEkqA73z4xIzUdfETtdTQY-t'; // Your reCAPTCHA v3 secret key
     $recaptcha_response = $_POST['g-recaptcha-response'];
 
     // Make a request to the Google reCAPTCHA API
@@ -28,14 +29,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Send the email.
         if (mail($recipient, $subject, $email_content, $email_headers)) {
-            // Redirect to the 'success' page.
+            // Redirect to the 'thank-you' page.
             header("Location: thank-you.html");
         } else {
             // Redirect to the 'error' page.
             header("Location: error.html");
         }
     } else {
-        // CAPTCHA failed, handle the error
+        // CAPTCHA validation failed, handle the error
         header("Location: captcha-failed.html");
     }
 }
