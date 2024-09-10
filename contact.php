@@ -3,14 +3,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = strip_tags(trim($_POST["name"]));
     $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
     $message = trim($_POST["message"]);
-
-    // reCAPTCHA validation
-    $recaptcha_secret = "6Ldfaz0qAAAAADd2IEkqA73z4xIzUdfETtdTQY-t";
+    $recaptcha_secret = '6Ldfaz0qAAAAADd2IEkqA73z4xIzUdfETtdTQY-t'; // Your secret key from reCAPTCHA v3
     $recaptcha_response = $_POST['g-recaptcha-response'];
+
+    // Make a request to the Google reCAPTCHA API
     $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$recaptcha_secret&response=$recaptcha_response");
     $responseKeys = json_decode($response, true);
 
-    if ($responseKeys["success"]) {
+    // Check if reCAPTCHA is valid
+    if ($responseKeys["success"] && $responseKeys["score"] >= 0.5) {
         // Set the recipient email address.
         $recipient = "guarnergonzalo@gmail.com"; // Update with your email
 
