@@ -41,22 +41,66 @@
 				</header>
 			</section>
 
+
 			<!-- Intro -->
 			<section id="intro" class="container">
 				<div class="row">
 					<div class="col-12">
 						<header>
-							<h2>Filter Projects by Tags</h2>
+							<h2>Filter Projects</h2>
 						</header>
-						<div id="tag-buttons" class="tags">
-							<button class="tag-button" data-tag="games">Games</button>
-							<button class="tag-button" data-tag="swarm-intelligence">Swarm Intelligence</button>
-							<button class="tag-button" data-tag="applied-physics">Applied Physics</button>
+						<div id="filter-categories">
+
+							<!-- Project Type Tags -->
+							<div class="filter-category">
+								<h3>Project Type</h3>
+								<div class="tags">
+									<button class="tag-button" data-tag="games" data-group="type">Games</button>
+									<button class="tag-button" data-tag="swarm-intelligence" data-group="type">Swarm
+										Intelligence</button>
+									<button class="tag-button" data-tag="applied-physics" data-group="type">Applied
+										Physics</button>
+									<!-- Add more project type tags if needed -->
+								</div>
+							</div>
+
+							<!-- Technologies Tags (Collapsible) -->
+							<div class="filter-category">
+								<h3>
+									<button class="collapsible">Technologies</button>
+								</h3>
+								<div class="content">
+									<div class="tags">
+										<button class="tag-button" data-tag="unity"
+											data-group="technology">Unity</button>
+										<button class="tag-button" data-tag="unreal-engine"
+											data-group="technology">Unreal Engine</button>
+										<button class="tag-button" data-tag="matlab"
+											data-group="technology">MATLAB</button>
+										<button class="tag-button" data-tag="vr" data-group="technology">VR</button>
+										<button class="tag-button" data-tag="point-clouds" data-group="technology">Point
+											Clouds</button>
+										<button class="tag-button" data-tag="webdev"
+											data-group="technology">WebDev</button>
+										<button class="tag-button" data-tag="sql" data-group="technology">SQL</button>
+										<button class="tag-button" data-tag="chatgpt"
+											data-group="technology">ChatGPT</button>
+											<button class="tag-button" data-tag="fortran"
+											data-group="technology">Fortran</button>
+											<button class="tag-button" data-tag="c#"
+											data-group="technology">C#</button>
+										<button class="tag-button" data-tag="ros" data-group="technology">ROS</button>
+									</div>
+								</div>
+							</div>
+
+							<!-- Clear Filters Button -->
 							<button id="clear-filters">Clear Filters</button>
 						</div>
 					</div>
 				</div>
 			</section>
+
 
 		</section>
 
@@ -73,7 +117,7 @@
 							</header>
 							<div class="row">
 								<div class="col-4 col-6-medium col-12-small">
-									<section class="box" data-tags="games">
+									<section class="box" data-tags="games unity">
 										<a class="image featured"><img src="images/ZigZagPause.png" alt=""
 												id="image" /></a>
 										<script type="text/javascript">
@@ -107,10 +151,10 @@
 									</section>
 								</div>
 								<div class="col-4 col-6-medium col-12-small">
-									<section class="box" data-tags="swarm-intelligence applied-physics">
+									<section class="box" data-tags="swarm-intelligence matlab applied-physics">
 										<a class="video">
-											<video poster="images/SA_ComplexArena_Poster.png" width="100%"
-												height="auto" loop muted>
+											<video poster="images/SA_ComplexArena_Poster.png" width="100%" height="auto"
+												loop muted>
 												<source data-src="images/SA_ComplexArena.mp4" type="video/mp4">
 												Your browser does not support the video tag.
 											</video>
@@ -139,7 +183,7 @@
 									</section>
 								</div>
 								<div class="col-4 col-6-medium col-12-small">
-									<section class="box">
+									<section class="box" data-tags="swarm-intelligence applied-physics fortran">
 										<a href="images/gifcellsportrait.gif" class="image featured"><img
 												src="images/gifcellsportrait.gif" alt="" /></a>
 										<header>
@@ -155,7 +199,7 @@
 									</section>
 								</div>
 								<div class="col-4 col-6-medium col-12-small">
-									<section class="box">
+									<section class="box" data-tags="games unity">
 										<a href="images/CacaoGame.png" class="image featured"><img
 												src="images/CacaoGame.png" alt="" /></a>
 										<header>
@@ -173,9 +217,10 @@
 									</section>
 								</div>
 								<div class="col-4 col-6-medium col-12-small">
-									<section class="box">
+									<section class="box" data-tags="games unity">
 										<a class="video">
-											<video poster="images/Planet_Poster.png" width="100%" height="auto" loop muted>
+											<video poster="images/Planet_Poster.png" width="100%" height="auto" loop
+												muted>
 												<source data-src="images/Planet.mp4" type="video/mp4">
 												Your browser does not support the video tag.
 											</video>
@@ -192,7 +237,7 @@
 									</section>
 								</div>
 								<div class="col-4 col-6-medium col-12-small">
-									<section class="box">
+									<section class="box" data-tags="applied-physics c#">
 										<a href="images/CubeSolvedBig.png" class="image featured"><img
 												src="images/CubeSolvedBig.png" alt="" /></a>
 										<header>
@@ -215,7 +260,7 @@
 									</section>
 								</div>
 								<div class="col-4 col-6-medium col-12-small">
-									<section class="box">
+									<section class="box" data-tags="games unity">
 										<a href="images/HexGame.png" class="image featured"><img
 												src="images/HexGame.png" alt="" /></a>
 										<header>
@@ -223,7 +268,8 @@
 										</header>
 										<p>My first big project in video game development, a turn-based civilization
 											game based on the popular Hexonia. It's hexagonal grid map allowed me to
-											apply physics knowledge outside of academia for the first time, as I used
+											apply mathematical knowledge outside of academia for the first time, as I
+											used
 											algebraic operations to quickly work with the geometry of the world. The
 											development of this project introduced me to pathfinding algorithms, simple
 											game AIs and random map generation with Perlin noise, among others. The
