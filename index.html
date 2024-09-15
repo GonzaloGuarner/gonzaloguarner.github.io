@@ -37,39 +37,23 @@
 			<section id="banner">
 				<header>
 					<h2>Hi, I'm Gonzalo Guarner.</h2>
-					<p>Game Developer / Applied Physicist / Master Swarm Intelligence</p>
+					<p>Digital Twin Developer / Applied Physicist / Unity Developer</p>
 				</header>
 			</section>
 
 			<!-- Intro -->
 			<section id="intro" class="container">
 				<div class="row">
-					<div class="col-4 col-12-medium">
-						<section class="first">
-							<i class="icon solid featured fa-gamepad"></i>
-							<header>
-								<h2>Games</h2>
-							</header>
-							<p></p>
-						</section>
-					</div>
-					<div class="col-4 col-12-medium">
-						<section class="middle">
-							<i class="icon solid featured alt2 fa-brain"></i>
-							<header>
-								<h2>Swarm Intelligence</h2>
-							</header>
-							<p></p>
-						</section>
-					</div>
-					<div class="col-4 col-12-medium">
-						<section class="last">
-							<i class="icon solid featured alt fa-laptop-code"></i>
-							<header>
-								<h2>Applied Physics</h2>
-							</header>
-							<p></p>
-						</section>
+					<div class="col-12">
+						<header>
+							<h2>Filter Projects by Tags</h2>
+						</header>
+						<div id="tag-buttons" class="tags">
+							<button class="tag-button" data-tag="games">Games</button>
+							<button class="tag-button" data-tag="swarm-intelligence">Swarm Intelligence</button>
+							<button class="tag-button" data-tag="applied-physics">Applied Physics</button>
+							<button id="clear-filters">Clear Filters</button>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -89,7 +73,7 @@
 							</header>
 							<div class="row">
 								<div class="col-4 col-6-medium col-12-small">
-									<section class="box">
+									<section class="box" data-tags="games">
 										<a class="image featured"><img src="images/ZigZagPause.png" alt=""
 												id="image" /></a>
 										<script type="text/javascript">
@@ -123,7 +107,7 @@
 									</section>
 								</div>
 								<div class="col-4 col-6-medium col-12-small">
-									<section class="box">
+									<section class="box" data-tags="swarm-intelligence applied-physics">
 										<a class="video">
 											<video poster="images/SA_ComplexArena_Poster.png" width="100%"
 												height="auto" loop muted>

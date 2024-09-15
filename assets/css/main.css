@@ -2919,3 +2919,17 @@ input, select, textarea {
 			}
 
 	}
+
+	/*Tag system styles*/
+	.tag-button {
+		padding: 10px 20px;
+		margin: 5px;
+		background-color: #eee;
+		border: none;
+		cursor: pointer;
+	}
+	
+	.tag-button.active {
+		background-color: #007acc;
+		color: #fff;
+	}
