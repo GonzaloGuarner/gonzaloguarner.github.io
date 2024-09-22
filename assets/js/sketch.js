@@ -161,7 +161,9 @@ class Fish {
 
     respawn() {
         this.position = createVector(random(width), random(height));
-        this.velocity.setMag(0);
+        this.velocity = p5.Vector.random2D();
+        this.velocity.setMag(random(2, 4));
+        this.acceleration.mult(0);
       }
     
     show() {
@@ -179,6 +181,7 @@ class Fish {
       this.maxForce = 0.5;
       this.maxSpeed = 5;
       this.eatingDistance = 8;
+      this.eatingDistanceSquared = this.eatingDistance**2;
     }
     
     hunt(fish) {
@@ -186,15 +189,15 @@ class Fish {
       let closest = null;
       let record = Infinity;
       for (let boid of fish) {
-        let d = dist(this.position.x, this.position.y, boid.position.x, boid.position.y);
-        if (d < record) {
-          record = d;
+        let dSquared = (this.position.x - boid.position.x) ** 2 + (this.position.y - boid.position.y) ** 2;
+        if (dSquared < record) {
+          record = dSquared;
           closest = boid;
         }
       }
       if (closest) {
         this.seek(closest.position);
-        if (record < this.eatingDistance) {
+        if (record <= eatingDistanceSquared) {
             // Directly tell the fish to respawn
             closest.respawn();
           }
@@ -225,7 +228,7 @@ class Fish {
     
     show() {
       strokeWeight(16);
-      stroke(220, 50, 50);
+      stroke(220, 250, 50);
       point(this.position.x, this.position.y);
     }
   }
