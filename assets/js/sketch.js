@@ -168,7 +168,7 @@ class Fish {
     
     show() {
       strokeWeight(8);
-      stroke(53, 149, 240);
+      stroke(153, 149, 240);
       point(this.position.x, this.position.y);
     }
   }
