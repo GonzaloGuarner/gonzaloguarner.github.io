@@ -181,7 +181,7 @@ class Fish {
       this.maxForce = 0.5;
       this.maxSpeed = 5;
       this.eatingDistance = 8;
-      this.eatingDistanceSquared = 64;
+      this.eatingDistanceSquared = this.eatingDistance**2;
     }
     
     hunt(fish) {
@@ -197,10 +197,10 @@ class Fish {
         }
         if (closest) {
             this.seek(closest.position);
-            // if (record < eatingDistanceSquared) {
-            //     // Directly tell the fish to respawn
-            //     closest.respawn();
-            // }
+            if (record < this.eatingDistanceSquared) {
+                // Directly tell the fish to respawn
+                closest.respawn();
+            }
         }
     }
     
