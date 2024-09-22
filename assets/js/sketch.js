@@ -197,7 +197,7 @@ class Fish {
       }
       if (closest) {
         this.seek(closest.position);
-        if (record <= eatingDistanceSquared) {
+        if (record < eatingDistanceSquared) {
             // Directly tell the fish to respawn
             closest.respawn();
           }
