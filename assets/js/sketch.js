@@ -168,7 +168,7 @@ class Fish {
     
     show() {
       strokeWeight(8);
-      stroke(153, 149, 240);
+      stroke(53, 149, 240);
       point(this.position.x, this.position.y);
     }
   }
@@ -188,20 +188,20 @@ class Fish {
       // Find the closest fish
       let closest = null;
       let record = Infinity;
-        // for (let boid of fish) {
-        //     let dSquared = (this.position.x - boid.position.x) ** 2 + (this.position.y - boid.position.y) ** 2;
-        //     if (dSquared < record) {
-        //         record = dSquared;
-        //         closest = boid;
-        //     }
-        // }
-        // if (closest) {
-        //     this.seek(closest.position);
-        //     if (record < eatingDistanceSquared) {
-        //         // Directly tell the fish to respawn
-        //         closest.respawn();
-        //     }
-        // }
+        for (let boid of fish) {
+            let dSquared = (this.position.x - boid.position.x) ** 2 + (this.position.y - boid.position.y) ** 2;
+            if (dSquared < record) {
+                record = dSquared;
+                closest = boid;
+            }
+        }
+        if (closest) {
+            this.seek(closest.position);
+            // if (record < eatingDistanceSquared) {
+            //     // Directly tell the fish to respawn
+            //     closest.respawn();
+            // }
+        }
     }
     
     seek(target) {
