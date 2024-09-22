@@ -158,6 +158,11 @@ class Fish {
       if (this.position.y > height) this.position.y = 0;
       else if (this.position.y < 0) this.position.y = height;
     }
+
+    respawn() {
+        this.position = createVector(random(width), random(height));
+        this.velocity.setMag(0);
+      }
     
     show() {
       strokeWeight(8);
@@ -173,6 +178,7 @@ class Fish {
       this.acceleration = createVector();
       this.maxForce = 0.5;
       this.maxSpeed = 5;
+      this.eatingDistance = 8;
     }
     
     hunt(fish) {
@@ -188,6 +194,10 @@ class Fish {
       }
       if (closest) {
         this.seek(closest.position);
+        if (record < this.eatingDistance) {
+            // Directly tell the fish to respawn
+            closest.respawn();
+          }
       }
     }
     
