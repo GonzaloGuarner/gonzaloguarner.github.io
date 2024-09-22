@@ -28,7 +28,7 @@ function draw() {
   }
   
   // Update and display predator
-  //predator.hunt(fish);
+  predator.hunt(fish);
   predator.update();
   predator.edges();
   predator.show();
@@ -228,7 +228,7 @@ class Fish {
     
     show() {
       strokeWeight(16);
-      stroke(220, 230, 50);
+      stroke(220, 50, 50);
       point(this.position.x, this.position.y);
     }
   }
