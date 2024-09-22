@@ -3,9 +3,9 @@ let predator;
 let numFish = 100;
 
 function setup() {
-    let container = document.getElementById('canvas');
+    let container = document.getElementById('canvas-container');
     let cnv = createCanvas(container.offsetWidth, container.offsetHeight);
-    cnv.parent('canvas')
+    cnv.parent('canvas-container')
   
   // Create fish
   for (let i = 0; i < numFish; i++) {
@@ -35,7 +35,8 @@ function draw() {
 }
 
 function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
+    let container = document.getElementById('canvas-container');
+  resizeCanvas(container.offsetWidth, container.offsetHeight);
 }
 class Fish {
     constructor(x, y) {
