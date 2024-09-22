@@ -3,7 +3,9 @@ let predator;
 let numFish = 100;
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+    let container = document.getElementById('canvas');
+    let cnv = createCanvas(container.offsetWidth, container.offsetHeight);
+    cnv.parent('canvas')
   
   // Create fish
   for (let i = 0; i < numFish; i++) {
