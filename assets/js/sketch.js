@@ -28,7 +28,7 @@ function draw() {
   }
   
   // Update and display predator
-  predator.hunt(fish);
+  //predator.hunt(fish);
   predator.update();
   predator.edges();
   predator.show();
