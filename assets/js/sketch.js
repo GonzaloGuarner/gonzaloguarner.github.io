@@ -17,7 +17,7 @@ function setup() {
 }
 
 function draw() {
-  background(33, 30, 31, 150); // Semi-transparent background for trailing effect
+  background(37, 33, 34, 100); // Semi-transparent background for trailing effect
   
   // Update and display fish
   for (let boid of fish) {
