@@ -191,8 +191,10 @@ class Fish {
   }
 
   edges() {
-    this.position.x = (this.position.x + width) % width; //Not suitable for lightspeed-speeds
-    this.position.y = (this.position.y + height) % height;
+    if (this.position.x > width) this.position.x = 0;
+    else if (this.position.x < 0) this.position.x = width;
+    if (this.position.y > height) this.position.y = 0;
+    else if (this.position.y < 0) this.position.y = height;
   }
 
   respawn() {
@@ -263,8 +265,10 @@ class Fish {
     }
   
     edges() {
-      this.position.x = (this.position.x + width) % width;
-      this.position.y = (this.position.y + height) % height;
+      if (this.position.x > width) this.position.x = 0;
+      else if (this.position.x < 0) this.position.x = width;
+      if (this.position.y > height) this.position.y = 0;
+      else if (this.position.y < 0) this.position.y = height;
     }
   
     show() {
