@@ -216,67 +216,106 @@ class Fish {
   }
 }
 
-  class Predator {
-    constructor(x, y) {
-      this.position = createVector(x, y);
-      this.velocity = p5.Vector.random2D();
-      this.velocity.setMag(3);
-      this.acceleration = createVector();
-      this.maxForce = 0.5;
-      this.maxSpeed = 5;
-      this.eatingDistanceSquared = 8 ** 2;
-    }
-  
-    hunt(grid) {
-      let neighbors = grid.queryPosition(this.position.x, this.position.y);
-  
-      let closest = null;
-      let record = Infinity;
-      for (let boid of neighbors) {
-        let dx = this.position.x - boid.position.x;
-        let dy = this.position.y - boid.position.y;
-        let dSquared = dx * dx + dy * dy;
-        if (dSquared < record) {
-          record = dSquared;
-          closest = boid;
-        }
+class Predator {
+  constructor(x, y) {
+    this.position = createVector(x, y);                // Predator's position
+    this.velocity = p5.Vector.random2D();              // Initial random velocity
+    this.velocity.setMag(3);                           // Set initial speed
+    this.acceleration = createVector();                // Acceleration vector
+    this.maxForce = 0.5;                               // Maximum steering force
+    this.maxSpeed = 5;                                 // Maximum speed
+    this.eatingDistanceSquared = 8 ** 2;               // Distance at which prey is eaten
+    this.noiseOffset = random(1000);                   // Perlin noise offset for x
+    this.noiseOffsetY = random(1000);                  // Perlin noise offset for y
+    this.noiseIncrement = 0.01;                        // Controls the smoothness of movement
+  }
+
+  // Main behavior method
+  hunt(grid) {
+    // Query nearby cells in the spatial grid
+    let neighbors = grid.queryPosition(this.position.x, this.position.y);
+
+    let closest = null;
+    let record = Infinity;
+
+    // Find the closest prey (fish)
+    for (let boid of neighbors) {
+      let dx = this.position.x - boid.position.x;
+      let dy = this.position.y - boid.position.y;
+      let dSquared = dx * dx + dy * dy;
+      if (dSquared < record) {
+        record = dSquared;
+        closest = boid;
       }
-      if (closest) {
-        this.seek(closest.position);
-        if (record < this.eatingDistanceSquared) {
-          closest.respawn();
-        }
+    }
+
+    if (closest) {
+      // If prey is detected, seek it
+      this.seek(closest.position);
+      if (record < this.eatingDistanceSquared) {
+        // Consume the prey and respawn it elsewhere
+        closest.respawn();
       }
-    }
-  
-    seek(target) {
-      let desired = p5.Vector.sub(target, this.position);
-      desired.setMag(this.maxSpeed);
-      let steering = p5.Vector.sub(desired, this.velocity);
-      steering.limit(this.maxForce);
-      this.acceleration.add(steering);
-    }
-  
-    update() {
-      this.position.add(this.velocity);
-      this.velocity.add(this.acceleration);
-      this.velocity.limit(this.maxSpeed);
-      this.acceleration.mult(0);
-    }
-  
-    edges() {
-      if (this.position.x > width) this.position.x = 0;
-      else if (this.position.x < 0) this.position.x = width;
-      if (this.position.y > height) this.position.y = 0;
-      else if (this.position.y < 0) this.position.y = height;
-    }
-  
-    show() {
-      strokeWeight(16);
-      stroke(213, 35, 70);
-      point(this.position.x, this.position.y);
+    } else {
+      // If no prey is detected, wander using Perlin noise
+      this.perlinWander();
     }
   }
+
+  // Perlin noise-based wandering behavior
+  perlinWander() {
+    // Generate angles based on Perlin noise values
+    let angleX = map(noise(this.noiseOffset), 0, 1, -PI, PI);
+    let angleY = map(noise(this.noiseOffsetY), 0, 1, -PI, PI);
+
+    // Create a force vector using the calculated angles
+    let force = createVector(cos(angleX), sin(angleY));
+
+    force.setMag(this.maxForce); // Scale the force to maximum steering force
+
+    // Apply the wandering force to the predator's acceleration
+    this.acceleration.add(force);
+
+    // Increment noise offsets for smooth transitions in Perlin noise
+    this.noiseOffset += this.noiseIncrement;
+    this.noiseOffsetY += this.noiseIncrement;
+  }
+
+  // Method to steer towards a target position
+  seek(target) {
+    let desired = p5.Vector.sub(target, this.position); // Desired velocity
+    desired.setMag(this.maxSpeed);                      // Scale to maximum speed
+    let steering = p5.Vector.sub(desired, this.velocity); // Steering force
+    steering.limit(this.maxForce * 1.5);                // Limit to maximum force
+    this.acceleration.add(steering);                    // Apply steering force
+  }
+
+  // Update predator's position and velocity
+  update() {
+    this.velocity.add(this.acceleration);               // Update velocity
+    this.velocity.limit(this.maxSpeed);                 // Limit speed
+    this.position.add(this.velocity);                   // Update position
+    this.acceleration.mult(0);                          // Reset acceleration
+  }
+
+  // Handle wrapping around the edges of the canvas
+  edges() {
+    this.position.x = (this.position.x + width) % width;
+    this.position.y = (this.position.y + height) % height;
+  }
+
+  // Render the predator on the canvas
+  show() {
+    push();
+    translate(this.position.x, this.position.y);
+    rotate(this.velocity.heading());                    // Rotate to face direction of movement
+    noStroke();
+    fill(213, 35, 70);                                  // Predator color
+    // Draw a triangle representing the predator
+    triangle(0, -10, -5, 5, 5, 5);
+    pop();
+  }
+}
 
   class SpatialGrid {
     constructor(width, height, cellSize) {
