@@ -2,7 +2,7 @@ let fish = [];
 let predator;
 let numFish = 100;
 let grid;
-let gridSize = 100; // Size based on perception radius
+let gridSize = 100; // Size based on perception radius (2-4x)
 
 function setup() {
   let container = document.getElementById('canvas-container');
@@ -23,15 +23,15 @@ function draw() {
 
   // Update the spatial grid
   grid.clear();
-  for (let boid of fish) {
-    grid.add(boid);
+  for (let f of fish) {
+    grid.add(f);
   }
 
   // Update and display fish
-  for (let boid of fish) {
-    boid.flock(grid, predator);
-    boid.update();
-    boid.edges();
+  for (let f of fish) {
+    f.flock(grid, predator);
+    f.update();
+    f.edges();
   }
   // Batch draw all fish
   Fish.showAll(fish);
@@ -191,10 +191,10 @@ class Fish {
   }
 
   edges() {
-    if (this.position.x > width) this.position.x = 0;
-    else if (this.position.x < 0) this.position.x = width;
-    if (this.position.y > height) this.position.y = 0;
-    else if (this.position.y < 0) this.position.y = height;
+    if (this.position.x >= width) this.position.x = this.position.x % width;
+    else if (this.position.x < 0) this.position.x = (this.position.x + width) % width;
+    if (this.position.y >= height) this.position.y = this.position.y % height;
+    else if (this.position.y < 0) this.position.y = (this.position.y + height) % height;
   }
 
   respawn() {
