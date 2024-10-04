@@ -290,7 +290,7 @@ class Predator {
   show() {
     noStroke();
     fill(213, 35, 70); // Predator color
-    ellipse(this.position.x, this.position.y, 16, 16);
+    circle(this.position.x, this.position.y, 16);
   }
 }
 

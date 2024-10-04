@@ -1760,6 +1760,11 @@ input, select, textarea {
 		display: block;
 		width: 119.75%;
 		margin: -2.8em 0em 1em -1.75em;
+		transition: transform 0.25s ease;
+	}
+
+	.video video:hover {
+		transform: scale(1.15); 
 	}
 	.video.featured {
 		display: block;
