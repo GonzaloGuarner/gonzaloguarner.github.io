@@ -1764,7 +1764,7 @@ input, select, textarea {
 	}
 
 	.video video:hover {
-		transform: scale(1.15); 
+		transform: scale(1.1); 
 	}
 	.video.featured {
 		display: block;
