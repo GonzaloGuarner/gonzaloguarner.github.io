@@ -1605,6 +1605,8 @@ input, select, textarea {
 		display: flex;
 		flex-direction: column; 
 		justify-content: space-between;
+		border-bottom: solid 10px #ccc;
+		min-height: 500px;
 	}
 
 		.box .image.featured {
@@ -1633,6 +1635,33 @@ input, select, textarea {
 		.box footer ul.actions {
 			margin-bottom: 0;
 		}
+
+/* Insert your new styles here, after .box rules and before the Button section */
+.text-content {
+  max-height: 150px; /* adjust as needed */
+  overflow: hidden;
+  position: relative;
+}
+
+.text-content:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1));
+}
+
+.read-more-button {
+  background: #ddd; /* match the darker gray style desired */
+  color: #000;
+  border: none;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  margin-top: 1em;
+  border-radius: 5px;
+}
 
 /* Button */
 
