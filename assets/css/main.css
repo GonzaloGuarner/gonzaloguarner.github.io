@@ -1656,6 +1656,16 @@ input, select, textarea {
   background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1));
 }
 
+.text-content.expanded {
+	max-height: none;
+	overflow: visible;
+  }
+  
+  /* Optionally remove the gradient overlay when expanded */
+  .text-content.expanded:after {
+	display: none;
+  }
+
 .read-more-button {
   background: #ddd; /* match the darker gray style desired */
   color: #000;
@@ -1694,7 +1704,7 @@ input, select, textarea {
 
 		input[type="button"]:hover,
 		input[type="submit"]:hover,
-		input[type="reset"]:hover,
+		input[type="reset"]:hover, 
 		button:hover,
 		.button:hover {
 			background: #B64400;
