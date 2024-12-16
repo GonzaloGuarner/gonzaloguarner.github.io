@@ -1602,9 +1602,9 @@ input, select, textarea {
 /* Box */
 
 	.box {
-		background: #ffffff;
-		border-bottom: solid 1px #ccc;
-		padding: 2.75em 1.75em 2.75em 1.75em;
+		display: flex;
+		flex-direction: column; 
+		justify-content: space-between;
 	}
 
 		.box .image.featured {
@@ -2248,7 +2248,7 @@ input, select, textarea {
 				margin: 0 0 0.65em 0;
 			}
 			#banner header h3 {
-				color: #fff;
+				color: #B64400;
 				font-weight: 500;
 				margin: 0;
 				font-size: 2.0em;
@@ -3013,6 +3013,10 @@ input, select, textarea {
 	}
 	
 	.tag-button.active {
+		background-color: #B64400;
+		color: #fff;
+	}
+	.tag-button.hover {
 		background-color: #2f2f2f;
 		color: #fff;
 	}
