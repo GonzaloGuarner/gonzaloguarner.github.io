@@ -185,7 +185,7 @@ input, select, textarea {
 	}
 
 	a {
-		color: #d52349;
+		color: #B64400;
 		text-decoration: underline;
 	}
 
@@ -1647,7 +1647,7 @@ input, select, textarea {
 		cursor: pointer;
 		border: 0;
 		border-radius: 5px;
-		background: #d52349;
+		background: #B64400;
 		color: #fff !important;
 		font-weight: 700;
 		outline: 0;
@@ -1879,7 +1879,7 @@ input, select, textarea {
 			position: absolute;
 			left: 0;
 			top: 1.3em;
-			background-color: #d52349;
+			background-color: #B64400;
 			height: 3.5em;
 			text-align: center;
 			color: #fff;
@@ -1894,7 +1894,7 @@ input, select, textarea {
 				position: absolute;
 				bottom: 0;
 				right: -1.2em;
-				border-left: solid 1.25em #d52349;
+				border-left: solid 1.25em #B64400;
 				border-top: solid 1.8em transparent;
 				border-bottom: solid 1.8em transparent;
 			}
@@ -2066,7 +2066,7 @@ input, select, textarea {
 		.icon.featured {
 			position: relative;
 			display: inline-block;
-			background-color: #d52349;
+			background-color: #B64400;
 			width: 9em;
 			padding: 1.75em 0 0.75em 0;
 			border-top-left-radius: 5px;
@@ -2086,7 +2086,7 @@ input, select, textarea {
 				position: absolute;
 				bottom: -1.95em;
 				left: 0;
-				border-top: solid 2em #d52349;
+				border-top: solid 2em #B64400;
 				border-left: solid 4.5em transparent;
 				border-right: solid 4.5em transparent;
 			}
@@ -2168,7 +2168,7 @@ input, select, textarea {
 				}
 
 				#nav > ul > li.current > a {
-					background: #d52349;
+					background: #B64400;
 					color: #fff !important;
 					font-weight: 700;
 				}
@@ -2247,9 +2247,14 @@ input, select, textarea {
 				font-size: 2.5em;
 				margin: 0 0 0.65em 0;
 			}
-
+			#banner header h3 {
+				color: #B64400;
+				font-weight: 500;
+				margin: 0;
+				font-size: 2.0em;
+			}
 			#banner header p {
-				color: #d52349;
+				color: #B64400;
 				padding: 0;
 				font-style: normal;
 				margin: 0;
