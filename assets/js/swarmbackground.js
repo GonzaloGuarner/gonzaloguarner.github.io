@@ -17,8 +17,11 @@ function setup() {
   predator = new Predator(width / 2, height / 2);
 
   grid = new SpatialGrid(width, height, gridSize);
-}
 
+}
+window.addEventListener('load', () => {
+  windowResized(); // At this point container should have its final size
+});
 function draw() {
   background(37, 33, 34, 100); // Semi-transparent background for trail effect
 
