@@ -1823,8 +1823,7 @@ footer {
 }
 
 .read-more-button {
-	background: #ddd;
-	/* match the darker gray style desired */
+	background: #aaa;
 	color: #000;
 	border: none;
 	padding: 0.5em 1em;
@@ -1845,7 +1844,7 @@ button,
 	text-decoration: none;
 	cursor: pointer;
 	border: 0;
-	border-radius: 5px;
+	border-radius: 8px;
 	background: #B64400;
 	color: #fff !important;
 	font-weight: 700;
@@ -1872,7 +1871,7 @@ input[type="submit"]:active,
 input[type="reset"]:active,
 button:active,
 .button:active {
-	background: #c51349;
+	background: #B64400;
 }
 
 input[type="button"].alt,
@@ -1880,7 +1879,7 @@ input[type="submit"].alt,
 input[type="reset"].alt,
 button.alt,
 .button.alt {
-	background: #252122;
+	background: #aaa;
 }
 
 input[type="button"].alt:hover,
@@ -1888,7 +1887,7 @@ input[type="submit"].alt:hover,
 input[type="reset"].alt:hover,
 button.alt:hover,
 .button.alt:hover {
-	background: #353132;
+	background: #B64400;
 }
 
 input[type="button"].alt:active,
@@ -1896,7 +1895,7 @@ input[type="submit"].alt:active,
 input[type="reset"].alt:active,
 button.alt:active,
 .button.alt:active {
-	background: #151112;
+	background: #B64400;
 }
 
 input[type="button"].icon:before,
@@ -1925,12 +1924,13 @@ button.large,
 	display: block;
 	width: 100%;
 	transition: transform 0.25s ease;
+	border-radius: 8px;
 }
 
 .image img:hover {
-	-webkit-transform: scale(1.25);
+	-webkit-transform: scale(1.1);
 	/* or some other value */
-	transform: scale(1.1);
+	transform: scale(1.0625);
 }
 
 .image.centered {
@@ -1959,7 +1959,8 @@ button.large,
 .video video {
     display: block;
     width: 100%;       
-    margin: 0;         
+    margin: 0; 
+	border-radius: 8px;        
 }
 
 .video.featured {
@@ -1969,7 +1970,7 @@ button.large,
 }
 
 .video video:hover {
-	transform: scale(1.1);
+	transform: scale(1.0625);
 }
 
 
@@ -2144,17 +2145,30 @@ ul.divided li:first-child {
 /* Social */
 
 ul.social {
-	list-style: none;
-	padding-left: 0;
-	overflow: hidden;
-	cursor: default;
-	margin: 0 0 3.25em 0;
+    display: flex;
+    justify-content: space-between; /* Separates items into left and right groups */
+    list-style: none;
+    padding: 0;
+    margin: 0 0 3.25em 0;
+    align-items: center; /* Vertically aligns items */
+}
+
+ul.social .left-buttons {
+    display: flex;
+    gap: 1em; 
+}
+
+ul.social .right-icons {
+    display: flex;
+	justify-content: flex-end;
+    gap: 1em; 
+    margin-left: auto; 
 }
 
 ul.social li {
 	display: inline-block;
 	padding-left: 0;
-	margin-left: 0.75em;
+	margin-left: 0em;
 }
 
 ul.social li:first-child {
@@ -2174,10 +2188,29 @@ ul.social li a {
 	transition: background-color .25s ease-in-out;
 }
 
+ul.social li a.button {
+    font-size: 1.2em; /* Increase font size */
+    padding: 0em 1em; /* Add padding for a larger button */
+	width: auto;
+	height: 2.5em;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    background-color: #888; /* Match your primary button color */
+    color: #fff !important; /* Ensure text is visible */
+}
+
 ul.social li a:before {
 	color: #fff;
 	font-size: 2em;
 	line-height: 1.5em;
+}
+ul.social li a.fa-github,a.fa-steam {
+	background: #888;
+}
+ul.social li a.fa-github:hover,a.fa-steam:hover {
+	background: #B64400;
 }
 
 ul.social li a.fa-facebook {

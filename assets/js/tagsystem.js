@@ -14,11 +14,6 @@ document.addEventListener('DOMContentLoaded', function() {
         technology: []
     };
 
-    let msnryInstance = null;
-
-    document.addEventListener('masonryLayoutComplete', function(e) {
-        msnryInstance = e.detail.msnry;
-    });
 
     // Function to update the project visibility
     function updateProjects() {
@@ -47,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 box.style.display = 'none';
             }
         });
-        // Now recreate the Masonry instance to reflect the changes
+        // Now reelayout masonry. Replace with event if needed
         layoutAndDispatchMasonry();
     }
 

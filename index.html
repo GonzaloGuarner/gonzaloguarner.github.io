@@ -44,15 +44,16 @@
 									<button class="collapsible">By Type</button>
 								</h3>
 								<div class="content">
-								<div class="tags">								
-									<button class="tag-button" data-tag="applied-physics" data-group="type">Applied
-										Physics</button>
+									<div class="tags">
+										<button class="tag-button" data-tag="applied-physics" data-group="type">Applied
+											Physics</button>
 										<button class="tag-button" data-tag="swarm-intelligence" data-group="type">Swarm
 											Intelligence</button>
-											<button class="tag-button" data-tag="games" data-group="type">Games</button>
-											<button class="tag-button" data-tag="digital-twin" data-group="type">Digital Twins</button>
-									<!-- Add more project type tags if needed -->
-								</div>
+										<button class="tag-button" data-tag="games" data-group="type">Games</button>
+										<button class="tag-button" data-tag="digital-twin" data-group="type">Digital
+											Twins</button>
+										<!-- Add more project type tags if needed -->
+									</div>
 								</div>
 							</div>
 
@@ -74,7 +75,8 @@
 											Clouds</button>
 										<button class="tag-button" data-tag="webdev"
 											data-group="technology">WebDev</button>
-										<button class="tag-button" data-tag="databases" data-group="technology">Databases</button>
+										<button class="tag-button" data-tag="databases"
+											data-group="technology">Databases</button>
 										<button class="tag-button" data-tag="chatgpt"
 											data-group="technology">ChatGPT</button>
 										<button class="tag-button" data-tag="fortran"
@@ -104,422 +106,457 @@
 				<!-- <div class="row"> -->
 
 
-						<!-- Portfolio -->
-						<section>
-							<header class="major">
-								<h2>My Portfolio</h2>
+				<!-- Portfolio -->
+				<section>
+					<header class="major">
+						<h2>My Portfolio</h2>
+					</header>
+
+					<div class="portfolio-grid">
+						<div class="grid-sizer"></div>
+						<div class="gutter-sizer"></div>
+						<section class="box" data-tags="games">
+							<a class="image featured">
+								<img src="images/MandarinaVoidCut.png" alt="Slay the Spire Mod Poster" />
+							</a>
+							<header>
+								<h3>Slay the Spire: The Mandarina Mod</h3>
 							</header>
-
-							<div class="portfolio-grid">
-								<div class="grid-sizer"></div>	
-								<div class="gutter-sizer"></div>			
-									<section class="box" data-tags="games">
-										<a class="image featured">
-											<img src="images/MandarinaVoidCut.png" alt="Slay the Spire Mod Poster" />
-										</a>
-										<header>
-											<h3>Slay the Spire: The Mandarina Mod</h3>
-										</header>
-										<div class="text-content">
-											<p>
-											The <strong>Mandarina Mod</strong> for Slay the Spire was an opportunity to combine my passion for game design with practical programming skills. 
-											It features a new playable character, custom mechanics, visual and sound FX, and innovative card interactions designed to expand the game's strategic depth.
-										</p>
-										<p>
-											This project got me started with Java (never too late, I guess!) and "old"-school tools such as Dragonbones for animation and Krita for art design. 
-											I focused on object-oriented design, game-specific architecture, and algorithm optimization for dynamic card effects. 
-											Working with the Slay the Spire modding API honed my ability to quickly adapt to complex frameworks while balancing the creation of something both engaging and functional. 
-											The project was very demanding in terms of art design too, requiring custom visual and sound effects as well as over 80 unique illustrations. 
-											All in all, this two-month-long experience deepened my understanding of contributing to complex projects and rewarded me with my very own character in a well-loved game.
-										</p>
-									</div>
-										<button class="read-more-button" style="display:none;">Read More</button>												
-										<footer>
-											<ul class="actions">
-												<li><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=MANDARINA_MOD_ID" 
-													   class="button alt" target="_blank">Check it out on Steam Workshop</a></li>
-											</ul>
-										</footer>
-									</section>
-							
-									<section class="box" data-tags="digital-twin unity vr">
-										<a class="video featured">
-											<video controls poster="images/VRexplode_Poster.png" width="100%"
-												height="auto" loop muted aria-label="VR training environment video">
-												<source data-src="images/VRexplode.mp4" type="video/mp4">
-												Your browser does not support the video tag.
-											</video>
-										</a>
-										<header>
-											<h3>Immersive VR Training Environment</h3>
-										</header>
-										<div class="text-content">
-										<p>
-											Developed a VR simulation environment used as a virtual meeting space. 
-											Focus was put on realistic physics and intuitive interactions, f.i. when moving, grabbing objects, teleporting, receiving haptic responses.
-											Some other areas this project allowed me to explore were multi-user development and voice-chat. Especifically,
-											Unity's Netcode for GameObjects and Vivox were used, along with Lobby and Relay to handle the different user rooms and connection.
-										</p>
-									</div>
-									<button class="read-more-button" style="display:none;">Read More</button>	
-									</section>
-
-							
-									<section class="box" data-tags="digital-twin unity applied-physics">
-										<a class="video featured">
-											<video controls poster="images/meshgenerationDemoPoster.png" width="100%"
-												height="auto" loop muted
-												aria-label="Mesh manipulation demonstration video">
-												<source data-src="images/shotcreteDemo.mp4" type="video/mp4">
-												Your browser does not support the video tag.
-											</video>
-										</a>
-										<header>
-											<h3>Parallel Mesh handling and viscous fluid simulation</h3>
-										</header>
-										<div class="text-content">
-										<p>
-											A Unity-integrated tool enabling real-time mesh deformation, vertex
-											painting,
-											and procedural geometry generation. Ideal for developers and artists aiming
-											to create dynamic, interactive 3D content.
-										</p>
-									</div>
-									<button class="read-more-button" style="display:none;">Read More</button>	
-									</section>
-						
-									<section class="box" data-tags="unreal-engine unity simulation">
-										<a class="video featured">
-											<video controls poster="images/CarlaDrivingPoster.png" width="100%"
-												height="auto" loop muted
-												aria-label="Unity-CARLA autonomous driving simulation video">
-												<source data-src="images/CarlaUnitySideBySide.mp4" type="video/mp4">
-												Your browser does not support the video tag.
-											</video>
-										</a>
-										<header>
-											<h3>Unity-CARLA Autonomous Driving Simulation</h3>
-										</header>
-										<div class="text-content">
-										<p>
-											A hybrid environment merging Unity and CARLA for autonomous vehicle testing.
-											Simulate realistic traffic, sensor feeds, and varied driving conditions to
-											safely prototype and train self-driving systems.
-										</p>
-									</div>
-									<button class="read-more-button" style="display:none;">Read More</button>	
-									</section>
-						
-									<section class="box" data-tags="digital-twin ros unity">
-										<a class="video featured">
-											<video controls poster="images/ROSConnectionPoster.png" width="100%"
-												height="auto" loop muted
-												aria-label="ROS-connected robotic simulation video">
-												<source data-src="images/ROSConnectionDemo.mp4" type="video/mp4">
-												Your browser does not support the video tag.
-											</video>
-										</a>
-										<header>
-											<h3>ROS-Integrated Robot Control System</h3>
-										</header>
-										<div class="text-content">
-										<p>
-											A bridge between Unity and ROS, enabling real-time simulation and
-											control of robotic systems. Test, iterate, and visualize robotic behaviors
-											within a flexible virtual environment.
-										</p>
-									</div>
-									<button class="read-more-button" style="display:none;">Read More</button>
-									</section>
-
-									<section class="box" data-tags="unity C#">
-										<a class="image featured">
-											<img src="images/CrossStitchFull.png" alt="" />
-										</a>
-										<header>
-											<h3>Cross-Stitch Drawing App</h3>
-										</header>
-										<div class="text-content">
-										<p>This project originally started as a gift for my sister—a cross-stitching
-											tool that allowed her to plan her designs digitally. I later expanded the
-											project, turning it into a fully functional drawing app that I used as a
-											(needed) substitute for Microsoft Paint to create sketches and diagrams. With this
-											project, I revisited and applied the command pattern, used interfaces
-											extensively, tinkered around performance (f.i. used the flood fill algorithm for the ink
-											tool) and built a basic	undo/redo system that would later be incorporated in my professional
-											development.</p>
-										</div>
-										<button class="read-more-button" style="display:none;">Read More</button>
-										<footer>
-											<ul class="actions">
-												<li><a class="icon brands fa-github"
-														href="https://github.com/GonzaloGuarner/Cross-Stitch.git"><span
-															class="label">Github</span></a></li>
-											</ul>
-										</footer>
-									</section>
-
-
-									<section class="box" data-tags="chatgpt databases unity">
-										<a class="video featured">
-											<video controls poster="images/SecondBrain.png" width="100%" height="auto"
-												loop muted>
-												<source data-src="images/CameraAISecondBrain.mp4" type="video/mp4">
-												Your browser does not support the video tag.
-											</video>
-										</a>
-										<header>
-											<h3>The Second Brain: An AI safety project.</h3>
-										</header>
-										<div class="text-content">
-										<p>
-											<strong>Where did you leave your keys? How many red cars have you seen
-												today?
-												Met these people before... but what was their name?!
-												What if even the memories you don't remember could explain
-												themselves?</strong>
-											That's the question that sparked the creation of this project after the
-											release of ChatGPT Vision.
-											I imagined a system that combines large language models (LLMs), image
-											recognition,
-											and a camera that captures what you see, transforming visual input into a
-											comprehensive,
-											AI-driven memory bank. Sounds familiar? The "Black Mirror" episode
-											<em>The Entire History of You</em> describes something similar, yet obsolete
-											in comparison.
-											By leveraging image description capabilities, this "second brain" not only
-											stores visual
-											data but also enables navigation and "understanding" of it. This prototype
-											is intended to
-											demonstrate that building such a system is feasible for about anyone today,
-											even more so if using programming AI tools. Possibly too a good time to ponder
-											where we are headed.
-										</p>
-									</div>
-									<button class="read-more-button" style="display:none;">Read More</button>
-										<footer>
-											<ul class="actions">
-												<li><a href="" target=”_blank” class="button alt">Public repo soon</a>
-												</li>
-												<li><a class="icon brands fa-github-alt" href=""><span
-															class="label">Github</span></a></li>
-											</ul>
-										</footer>
-									</section>
-
-									<section class="box" data-tags="games unity">
-										<a class="image featured"><img src="images/ZigZagPause.png" alt=""
-												id="image" /></a>
-										<script type="text/javascript">
-
-											let image = document.getElementById('image');
-											let images = ["images/ZigZagMenu.png", "images/ZigZagGameplay.png", "images/ZigZagPause.png"];
-											let imageIndex = 0;
-											setInterval(function () {
-												image.src = images[imageIndex];
-												imageIndex = (imageIndex + 1) % (images.length);
-											}, 3000);
-										</script>
-										<header>
-											<h3>Zig Zag Pro</h3>
-										</header>
-										<div class="text-content">
-										<p> My first Google Play submission. Tap to zigzag across the increasingly
-											challenging levels or challenge yourself for a new highscore in endless
-											procedurally generated runs. LiveOps through the use of Microsoft's Playfab,
-											backend with LootLocker, monetization, skin customization and engaging level
-											design were new areas I could dive into and enjoy while developing this
-											project. </p>
-										</div>
-										<button class="read-more-button" style="display:none;">Read More</button>
-										<footer>
-											<ul class="actions">
-												<li><a href="zigzag2.html" class="button alt">Check it out online</a>
-												</li>
-												<li><a class="icon brands fa-google-play"
-														href="https://play.google.com/store/apps/details?id=com.BeaverPenguin.ZigZagPro"><span
-															class="label">GooglePlay</span></a></li>
-											</ul>
-										</footer>
-									</section>
-
-									<section class="box" data-tags="swarm-intelligence applied-physics matlab">
-										<a class="video featured">
-											<video poster="images/SA_ComplexArena_Poster.png" width="100%" height="auto"
-												loop muted>
-												<source data-src="images/SA_ComplexArena.mp4" type="video/mp4">
-												Your browser does not support the video tag.
-											</video>
-										</a>
-										<header>
-											<h3>The Fuzzing Swarms:</h3>
-											<h4> Particle Swarm Optimized Fuzzy Logic Controllers for Deployment of
-												Swarm Agents.</p>
-										</header>
-										<div class="text-content">
-										<p> Swarm Intelligence models the collective behaviour of self-organized
-											systems, usually following the paradigm that set natural swarms, such as
-											ants or bees. Developing this project was the core of my study at the Master
-											of Game Technology at the Breda University of Applied Sciences. The use of
-											Fuzzy Logic Controllers optimized through a metaheuristic (PSO) was studied
-											to efficiently conduct a dynamic swarm deployment, a fundamental task in
-											swarm applications.</p>
-										</div>
-										<button class="read-more-button" style="display:none;">Read More</button>
-										<footer>
-											<ul class="actions">
-												<li><a href="https://drive.google.com/file/d/1P6OcAvjgZ6Xiyut6Dlu89YAhu8zSzUQJ/view?usp=sharing"
-														target=”_blank” class="button alt">Here's the thesis</a></li>
-												<li><a class="icon brands fa-github"
-														href="https://github.com/GonzaloGuarner/FuzzingSwarms.git"><span
-															class="label">Github</span></a></li>
-											</ul>
-										</footer>
-									</section>
-
-									<section class="box" data-tags="swarm-intelligence applied-physics fortran">
-										<a href="images/gifcellsportrait.gif" class="image featured"><img
-												src="images/gifcellsportrait.gif" alt="" /></a>
-										<header>
-											<h3>Predicting Complex Community Dynamics from Computer-Generated
-												Simulations</h3>
-										</header>
-										<div class="text-content">
-										<p> This project was the core of my bachelor's thesis. The goal was to reproduce complex behaviour reported 
-											by different gut bacteria communities in various scientific papers. For that, we used cellular automata in a closed environment.
-											The main variables explored were survival rate, food absorption efficiency and antibiotic resistance. The use of maths and complex systems theory for physical system's
-											modelling is definetely fascinating to me.</p>
-										</div>
-										<button class="read-more-button" style="display:none;">Read More</button>
-									</section>
-
-									<section class="box" data-tags="games unity">
-										<a href="images/CacaoGame.png" class="image featured"><img
-												src="images/CacaoGame.png" alt="" /></a>
-										<header>
-											<h3>Cacao: bringing the board game online</h3>
-										</header>
-										<div class="text-content">
-										<p>Playing board games with friends can make for the best afternoons. During
-											2020 however, lockdown and restrictions complicated things for our group of
-											friends:  keeping on playing one of our favourite games was no longer
-											possible. This is where I decided to team up with a fellow programmer friend
-											to make an online replica of Cacao. Having a well-defined game design, I
-											also used this opportunity to further improve my knowledge in
-											object-oriented programming, particle systems, animations and tile
-											interaction.</p>
-										</div>
-										<button class="read-more-button" style="display:none;">Read More</button>
-									</section>
-
-									<section class="box" data-tags="games unity">
-										<a class="video featured">
-											<video poster="images/Planet_Poster.png" width="100%" height="auto" loop
-												muted>
-												<source data-src="images/Planet.mp4" type="video/mp4">
-												Your browser does not support the video tag.
-											</video>
-										</a>
-										<header>
-											<h3>Planet Racer Clone</h3>
-										</header>
-										<div class="text-content">
-										<p>Remaking this classic flash game allowed me to go through many layers of game
-											development. Areas such as UI, art, game physics, game flow and the shopping
-											system were developed while following the original game's structure. Sprite
-											design, procedural race generation and believable movement controls were
-											features I could experiment with, with satisfying results.</p>
-										</div>
-										<button class="read-more-button" style="display:none;">Read More</button>
-
-									</section>
-
-									<section class="box" data-tags="applied-physics c#">
-										<a href="images/CubeSolvedBig.png" class="image featured"><img
-												src="images/CubeSolvedBig.png" alt="" /></a>
-										<header>
-											<h3>Snake Rubik Cube Solver</h3>
-										</header>
-										<div class="text-content">
-										<p>After giving up on a 9-colour snake cube I was challenged to solve, I
-											realized I could make a computer work for me. The rules were straightforward:
-											build the cube without having two sub-cubes of the same colour in any side. With
-											the help of my laptop the tides turned quickly. With a rather simple
-											algorithm for parsing the tree of possible cube configurations, trying hundreds
-											of thousands of configurations was reduced to just 70 ms! And the one
-											and only solution was found.</p>
-										</div>
-										<button class="read-more-button" style="display:none;">Read More</button>
-										<footer>
-											<ul class="actions">
-												<li><a class="icon brands fa-github"
-														href="https://github.com/GonzaloGuarner/SnakeCubeSolver.git"><span
-															class="label">Github</span></a></li>
-											</ul>
-										</footer>
-									</section>
-
-									<section class="box" data-tags="games unity">
-										<a href="images/HexGame.png" class="image featured"><img
-												src="images/HexGame.png" alt="" /></a>
-										<header>
-											<h3>HEX Clash</h3>
-										</header>
-										<div class="text-content">
-										<p>My first big project in video game development, a turn-based civilization
-											game based on the popular Hexonia. It's hexagonal grid map allowed me to
-											apply mathematical knowledge outside of academia for the first time, as I
-											used
-											algebraic operations to quickly work with the geometry of the world. The
-											development of this project introduced me to pathfinding algorithms, simple
-											game AIs and random map generation with Perlin noise, among others. The
-											character models come from a 3D printing repository I used at the time.</p>
-										</div>
-										<button class="read-more-button" style="display:none;">Read More</button>
-									</section>			
+							<div class="text-content">
+								<p>
+									The <strong>Mandarina Mod</strong> for Slay the Spire was an opportunity to combine
+									my passion for game design with practical programming skills.
+									It features a new playable character, custom mechanics, visual and sound FX, and
+									innovative card interactions designed to expand the game's strategic depth.
+								</p>
+								<p>
+									This project got me started with Java (never too late, I guess!) and "old"-school
+									tools such as Dragonbones for animation and Krita for art design.
+									I focused on object-oriented design, game-specific architecture, and algorithm
+									optimization for dynamic card effects.
+									Working with the Slay the Spire modding API honed my ability to quickly adapt to
+									complex frameworks while balancing the creation of something both engaging and
+									functional.
+									The project was very demanding in terms of art design too, requiring custom visual
+									and sound effects as well as over 80 unique illustrations.
+									All in all, this two-month-long experience deepened my understanding of contributing
+									to complex projects and rewarded me with my very own character in a well-loved game.
+								</p>
 							</div>
+							<button class="read-more-button" style="display:none;">Read More</button>
+							<footer>
+								<ul class="social">
+									<div class="left-buttons">
+										<li><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=MANDARINA_MOD_ID"
+												class="button alt" target="_blank">Out on Steam Workshop</a></li>
+									</div>
+									<div class="right-icons">
+										<li><a class="icon brands fa-steam"
+												href="https://github.com/GonzaloGuarner/SnakeCubeSolver.git"><span
+													class="label">Steam</span></a></li>
+									</div>
+								</ul>
+							</footer>
 						</section>
+
+						<section class="box" data-tags="digital-twin unity vr">
+							<a class="video featured">
+								<video controls poster="images/VRexplode_Poster.png" width="100%" height="auto" loop
+									muted aria-label="VR training environment video">
+									<source data-src="images/VRexplode.mp4" type="video/mp4">
+									Your browser does not support the video tag.
+								</video>
+							</a>
+							<header>
+								<h3>Immersive VR Training Environment</h3>
+							</header>
+							<div class="text-content">
+								<p>
+									Developed a VR simulation environment used as a virtual meeting space.
+									Focus was put on realistic physics and intuitive interactions, f.i. when moving,
+									grabbing objects, teleporting, receiving haptic responses.
+									Some other areas this project allowed me to explore were multi-user development and
+									voice-chat. Especifically,
+									Unity's Netcode for GameObjects and Vivox were used, along with Lobby and Relay to
+									handle the different user rooms and connection.
+								</p>
+							</div>
+							<button class="read-more-button" style="display:none;">Read More</button>
+						</section>
+
+
+						<section class="box" data-tags="digital-twin unity applied-physics">
+							<a class="video featured">
+								<video controls poster="images/meshgenerationDemoPoster.png" width="100%" height="auto"
+									loop muted aria-label="Mesh manipulation demonstration video">
+									<source data-src="images/shotcreteDemo.mp4" type="video/mp4">
+									Your browser does not support the video tag.
+								</video>
+							</a>
+							<header>
+								<h3>Parallel Mesh handling and viscous fluid simulation</h3>
+							</header>
+							<div class="text-content">
+								<p>
+									A Unity-integrated tool enabling real-time mesh deformation, vertex
+									painting,
+									and procedural geometry generation. Ideal for developers and artists aiming
+									to create dynamic, interactive 3D content.
+								</p>
+							</div>
+							<button class="read-more-button" style="display:none;">Read More</button>
+						</section>
+
+						<section class="box" data-tags="unreal-engine unity simulation">
+							<a class="video featured">
+								<video controls poster="images/CarlaDrivingPoster.png" width="100%" height="auto" loop
+									muted aria-label="Unity-CARLA autonomous driving simulation video">
+									<source data-src="images/CarlaUnitySideBySide.mp4" type="video/mp4">
+									Your browser does not support the video tag.
+								</video>
+							</a>
+							<header>
+								<h3>Unity-CARLA Autonomous Driving Simulation</h3>
+							</header>
+							<div class="text-content">
+								<p>
+									A hybrid environment merging Unity and CARLA for autonomous vehicle testing.
+									Simulate realistic traffic, sensor feeds, and varied driving conditions to
+									safely prototype and train self-driving systems.
+								</p>
+							</div>
+							<button class="read-more-button" style="display:none;">Read More</button>
+						</section>
+
+						<section class="box" data-tags="digital-twin ros unity">
+							<a class="video featured">
+								<video controls poster="images/ROSConnectionPoster.png" width="100%" height="auto" loop
+									muted aria-label="ROS-connected robotic simulation video">
+									<source data-src="images/ROSConnectionDemo.mp4" type="video/mp4">
+									Your browser does not support the video tag.
+								</video>
+							</a>
+							<header>
+								<h3>ROS-Integrated Robot Control System</h3>
+							</header>
+							<div class="text-content">
+								<p>
+									A bridge between Unity and ROS, enabling real-time simulation and
+									control of robotic systems. Test, iterate, and visualize robotic behaviors
+									within a flexible virtual environment.
+								</p>
+							</div>
+							<button class="read-more-button" style="display:none;">Read More</button>
+						</section>
+
+						<section class="box" data-tags="unity C#">
+							<a class="image featured">
+								<img src="images/CrossStitchFull.png" alt="" />
+							</a>
+							<header>
+								<h3>Cross-Stitch Drawing App</h3>
+							</header>
+							<div class="text-content">
+								<p>This project originally started as a gift for my sister—a cross-stitching
+									tool that allowed her to plan her designs digitally. I later expanded the
+									project, turning it into a fully functional drawing app that I used as a
+									(needed) substitute for Microsoft Paint to create sketches and diagrams. With this
+									project, I revisited and applied the command pattern, used interfaces
+									extensively, tinkered around performance (f.i. used the flood fill algorithm for the
+									ink
+									tool) and built a basic undo/redo system that would later be incorporated in my
+									professional
+									development.</p>
+							</div>
+							<button class="read-more-button" style="display:none;">Read More</button>
+							<footer>
+								<ul class="social">
+									<div class="right-icons">
+										<li><a class="icon brands fa-github"
+												href="https://github.com/GonzaloGuarner/Cross-Stitch.git"><span
+													class="label">Github</span></a></li>
+									</div>
+								</ul>
+							</footer>
+						</section>
+
+
+						<section class="box" data-tags="chatgpt databases unity">
+							<a class="video featured">
+								<video controls poster="images/SecondBrain.png" width="100%" height="auto" loop muted>
+									<source data-src="images/CameraAISecondBrain.mp4" type="video/mp4">
+									Your browser does not support the video tag.
+								</video>
+							</a>
+							<header>
+								<h3>The Second Brain: An AI safety project.</h3>
+							</header>
+							<div class="text-content">
+								<p>
+									<strong>Where did you leave your keys? How many red cars have you seen
+										today?
+										Met these people before... but what was their name?!
+										What if even the memories you don't remember could explain
+										themselves?</strong>
+									That's the question that sparked the creation of this project after the
+									release of ChatGPT Vision.
+									I imagined a system that combines large language models (LLMs), image
+									recognition,
+									and a camera that captures what you see, transforming visual input into a
+									comprehensive,
+									AI-driven memory bank. Sounds familiar? The "Black Mirror" episode
+									<em>The Entire History of You</em> describes something similar, yet obsolete
+									in comparison.
+									By leveraging image description capabilities, this "second brain" not only
+									stores visual
+									data but also enables navigation and "understanding" of it. This prototype
+									is intended to
+									demonstrate that building such a system is feasible for about anyone today,
+									even more so if using programming AI tools. Possibly too a good time to ponder
+									where we are headed.
+								</p>
+							</div>
+							<button class="read-more-button" style="display:none;">Read More</button>
+							<footer>
+								<ul class="social">
+									<div class="left-buttons">
+										<li><a href="" target=”_blank” class="button alt">Public repo soon</a>
+										</li>
+									</div>
+									<div class="right-icons">
+										<li><a class="icon brands fa-github" href=""><span
+													class="label">Github</span></a></li>
+									</div>
+								</ul>
+							</footer>
+						</section>
+
+						<section class="box" data-tags="games unity">
+							<a class="image featured"><img src="images/ZigZagPause.png" alt="" id="image" /></a>
+							<script type="text/javascript">
+
+								let image = document.getElementById('image');
+								let images = ["images/ZigZagMenu.png", "images/ZigZagGameplay.png", "images/ZigZagPause.png"];
+								let imageIndex = 0;
+								setInterval(function () {
+									image.src = images[imageIndex];
+									imageIndex = (imageIndex + 1) % (images.length);
+								}, 3000);
+							</script>
+							<header>
+								<h3>Zig Zag Pro</h3>
+							</header>
+							<div class="text-content">
+								<p> My first Google Play submission. Tap to zigzag across the increasingly
+									challenging levels or challenge yourself for a new highscore in endless
+									procedurally generated runs. LiveOps through the use of Microsoft's Playfab,
+									backend with LootLocker, monetization, skin customization and engaging level
+									design were new areas I could dive into and enjoy while developing this
+									project. </p>
+							</div>
+							<button class="read-more-button" style="display:none;">Read More</button>
+							<footer>
+								<ul class="social">
+									<div class="left-buttons">
+										<li><a href="zigzag2.html" class="button alt">Check it out online</a>
+										</li>
+									</div>
+									<div class="right-icons">
+										<li><a class="icon brands fa-google-play"
+												href="https://play.google.com/store/apps/details?id=com.BeaverPenguin.ZigZagPro"><span
+													class="label">GooglePlay</span></a></li>
+									</div>
+
+
+								</ul>
+							</footer>
+						</section>
+
+						<section class="box" data-tags="swarm-intelligence applied-physics matlab">
+							<a class="video featured">
+								<video poster="images/SA_ComplexArena_Poster.png" width="100%" height="auto" loop muted>
+									<source data-src="images/SA_ComplexArena.mp4" type="video/mp4">
+									Your browser does not support the video tag.
+								</video>
+							</a>
+							<header>
+								<h3>The Fuzzing Swarms:</h3>
+								<h4> Particle Swarm Optimized Fuzzy Logic Controllers for Deployment of
+									Swarm Agents.</p>
+							</header>
+							<div class="text-content">
+								<p> Swarm Intelligence models the collective behaviour of self-organized
+									systems, usually following the paradigm that set natural swarms, such as
+									ants or bees. Developing this project was the core of my study at the Master
+									of Game Technology at the Breda University of Applied Sciences. The use of
+									Fuzzy Logic Controllers optimized through a metaheuristic (PSO) was studied
+									to efficiently conduct a dynamic swarm deployment, a fundamental task in
+									swarm applications.</p>
+							</div>
+							<button class="read-more-button" style="display:none;">Read More</button>
+							<footer>
+								<ul class="social">
+									<div class="left-buttons">
+										<li><a href="https://drive.google.com/file/d/1P6OcAvjgZ6Xiyut6Dlu89YAhu8zSzUQJ/view?usp=sharing"
+												target=”_blank” class="button alt">Here's the thesis</a></li>
+									</div>
+									<div class="right-icons">
+										<li><a class="icon brands fa-github"
+												href="https://github.com/GonzaloGuarner/FuzzingSwarms.git"><span
+													class="label">Github</span></a></li>
+									</div>
+
+
+								</ul>
+							</footer>
+						</section>
+
+						<section class="box" data-tags="swarm-intelligence applied-physics fortran">
+							<a href="images/gifcellsportrait.gif" class="image featured"><img
+									src="images/gifcellsportrait.gif" alt="" /></a>
+							<header>
+								<h3>Predicting Complex Community Dynamics from Computer-Generated
+									Simulations</h3>
+							</header>
+							<div class="text-content">
+								<p> This project was the core of my bachelor's thesis. The goal was to reproduce complex
+									behaviour reported 
+									by different gut bacteria communities in various scientific papers. For that, we
+									used cellular automata in a closed environment.
+									The main variables explored were survival rate, food absorption efficiency and
+									antibiotic resistance. The use of maths and complex systems theory for physical
+									system's
+									modelling is definetely fascinating to me.</p>
+							</div>
+							<button class="read-more-button" style="display:none;">Read More</button>
+						</section>
+
+						<section class="box" data-tags="games unity">
+							<a href="images/CacaoGame.png" class="image featured"><img src="images/CacaoGame.png"
+									alt="" /></a>
+							<header>
+								<h3>Cacao: bringing the board game online</h3>
+							</header>
+							<div class="text-content">
+								<p>Playing board games with friends can make for the best afternoons. During
+									2020 however, lockdown and restrictions complicated things for our group of
+									friends:  keeping on playing one of our favourite games was no longer
+									possible. This is where I decided to team up with a fellow programmer friend
+									to make an online replica of Cacao. Having a well-defined game design, I
+									also used this opportunity to further improve my knowledge in
+									object-oriented programming, particle systems, animations and tile
+									interaction.</p>
+							</div>
+							<button class="read-more-button" style="display:none;">Read More</button>
+						</section>
+
+						<section class="box" data-tags="games unity">
+							<a class="video featured">
+								<video poster="images/Planet_Poster.png" width="100%" height="auto" loop muted>
+									<source data-src="images/Planet.mp4" type="video/mp4">
+									Your browser does not support the video tag.
+								</video>
+							</a>
+							<header>
+								<h3>Planet Racer Clone</h3>
+							</header>
+							<div class="text-content">
+								<p>Remaking this classic flash game allowed me to go through many layers of game
+									development. Areas such as UI, art, game physics, game flow and the shopping
+									system were developed while following the original game's structure. Sprite
+									design, procedural race generation and believable movement controls were
+									features I could experiment with, with satisfying results.</p>
+							</div>
+							<button class="read-more-button" style="display:none;">Read More</button>
+
+						</section>
+
+						<section class="box" data-tags="applied-physics c#">
+							<a href="images/CubeSolvedBig.png" class="image featured"><img
+									src="images/CubeSolvedBig.png" alt="" /></a>
+							<header>
+								<h3>Snake Rubik Cube Solver</h3>
+							</header>
+							<div class="text-content">
+								<p>After giving up on a 9-colour snake cube I was challenged to solve, I
+									realized I could make a computer work for me. The rules were straightforward:
+									build the cube without having two sub-cubes of the same colour in any side. With
+									the help of my laptop the tides turned quickly. With a rather simple
+									algorithm for parsing the tree of possible cube configurations, trying hundreds
+									of thousands of configurations was reduced to just 70 ms! And the one
+									and only solution was found.</p>
+							</div>
+							<button class="read-more-button" style="display:none;">Read More</button>
+							<footer>
+								<ul class="social">
+									<div class="right-icons">
+										<li><a class="icon brands fa-github"
+												href="https://github.com/GonzaloGuarner/SnakeCubeSolver.git"><span
+													class="label">Github</span></a></li>
+									</div>
+								</ul>
+							</footer>
+						</section>
+
+						<section class="box" data-tags="games unity">
+							<a href="images/HexGame.png" class="image featured"><img src="images/HexGame.png"
+									alt="" /></a>
+							<header>
+								<h3>HEX Clash</h3>
+							</header>
+							<div class="text-content">
+								<p>My first big project in video game development, a turn-based civilization
+									game based on the popular Hexonia. It's hexagonal grid map allowed me to
+									apply mathematical knowledge outside of academia for the first time, as I
+									used
+									algebraic operations to quickly work with the geometry of the world. The
+									development of this project introduced me to pathfinding algorithms, simple
+									game AIs and random map generation with Perlin noise, among others. The
+									character models come from a 3D printing repository I used at the time.</p>
+							</div>
+							<button class="read-more-button" style="display:none;">Read More</button>
+						</section>
+					</div>
+				</section>
 				<!-- </div> -->
 			</div>
 		</section>
 
-<!-- Footer -->
-<section id="footer">
-	<div class="container footer-flex">
-	  <div class="footer-left">
-		<ul class="contact">
-		  <li>
-			<h3>Location</h3>
-			<p>Barcelona, ES 08005</p>
-		  </li>
-		  <li>
-			<h3>Mail</h3>
-			<p><a href="mailto:gonzaloguarner@gmail.com">gonzaloguarner@gmail.com</a></p>
-		  </li>
-		</ul>
-	  </div>
-	  <div class="footer-middle">
-		<div class="col-12">
-			<div id="copyright">
-			  <ul class="links">
-				<li>&copy; GG. All rights reserved.</li>
-			  </ul>
+		<!-- Footer -->
+		<section id="footer">
+			<div class="container footer-flex">
+				<div class="footer-left">
+					<ul class="contact">
+						<li>
+							<h3>Location</h3>
+							<p>Barcelona, ES 08005</p>
+						</li>
+						<li>
+							<h3>Mail</h3>
+							<p><a href="mailto:gonzaloguarner@gmail.com">gonzaloguarner@gmail.com</a></p>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-middle">
+					<div class="col-12">
+						<div id="copyright">
+							<ul class="links">
+								<li>&copy; GG. All rights reserved.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="footer-right">
+					<ul class="social">
+						<li><a class="icon brands fa-linkedin-in" href="https://www.linkedin.com/in/gonzalo-guarner/">
+								<span class="label">LinkedIn</span></a></li>
+						<li><a class="icon brands fa-github" href="https://github.com/GonzaloGuarner">
+								<span class="label">Github</span></a></li>
+					</ul>
+				</div>
 			</div>
-		  </div>
-	  </div>
-	  <div class="footer-right">
-		<ul class="social">
-		  <li><a class="icon brands fa-linkedin-in" 
-				 href="https://www.linkedin.com/in/gonzalo-guarner/">
-			<span class="label">LinkedIn</span></a></li>
-		  <li><a class="icon brands fa-github" 
-				 href="https://github.com/GonzaloGuarner">
-			<span class="label">Github</span></a></li>
-		</ul>
-	  </div>
-	</div>
-  </section>
-  
+		</section>
+
 
 	</div>
 

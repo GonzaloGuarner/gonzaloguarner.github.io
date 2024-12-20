@@ -46,11 +46,23 @@ function layoutAndDispatchMasonry() {
         console.warn("Masonry instance is not initialized. Ensure createMasonry is called first.");
     }
 }
+function addVideoEventListeners() {
+    const videos = document.querySelectorAll('.portfolio-grid video');
+
+    videos.forEach(video => {
+        video.addEventListener('pause', () => {
+            layoutAndDispatchMasonry();
+        });
+    });
+}
+
 
 window.addEventListener('resize', () => {
     layoutAndDispatchMasonry();
 });
-// Initialize Masonry after the DOM is fully loaded
+
+// Initialize after the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
+    addVideoEventListeners();
     createMasonry();
 });

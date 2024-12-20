@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
           textContent.classList.add('expanded');
           this.textContent = 'Read Less';
         }
+        layoutAndDispatchMasonry(); // could use an event
       });
     });
   });
