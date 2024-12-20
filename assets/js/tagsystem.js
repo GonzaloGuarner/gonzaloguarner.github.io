@@ -14,6 +14,12 @@ document.addEventListener('DOMContentLoaded', function() {
         technology: []
     };
 
+    let msnryInstance = null;
+
+    document.addEventListener('masonryLayoutComplete', function(e) {
+        msnryInstance = e.detail.msnry;
+    });
+
     // Function to update the project visibility
     function updateProjects() {
         // Show or hide projects based on active tags
@@ -36,11 +42,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Show project if it matches all active tag categories
             if (matchesType && matchesTechnology) {
-                box.parentElement.style.display = '';
+                box.style.display = '';
             } else {
-                box.parentElement.style.display = 'none';
+                box.style.display = 'none';
             }
         });
+        // Now recreate the Masonry instance to reflect the changes
+        layoutAndDispatchMasonry();
     }
 
     // Add click event listeners to tag buttons

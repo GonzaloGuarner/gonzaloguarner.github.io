@@ -18,12 +18,12 @@ function setup() {
 
   grid = new SpatialGrid(width, height, gridSize);
 
+  window.addEventListener('resize', containerResized);
+  document.addEventListener('masonryLayoutComplete', containerResized);
 }
-window.addEventListener('load', () => {
-  windowResized(); // At this point container should have its final size
-});
+
 function draw() {
-  background(37, 33, 34, 100); // Semi-transparent background for trail effect
+  background(60, 55, 55, 100); // Semi-transparent background for trail effect
 
   // Update spatial grid
   grid.clear();
@@ -46,7 +46,7 @@ function draw() {
   predator.show();
 }
 
-function windowResized() {
+function containerResized() {
   let container = document.getElementById('canvas-container');
   resizeCanvas(container.offsetWidth, container.offsetHeight);
 }

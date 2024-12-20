@@ -44,12 +44,13 @@
 									<button class="collapsible">By Type</button>
 								</h3>
 								<div class="content">
-								<div class="tags">
-									<button class="tag-button" data-tag="games" data-group="type">Games</button>
-									<button class="tag-button" data-tag="swarm-intelligence" data-group="type">Swarm
-										Intelligence</button>
+								<div class="tags">								
 									<button class="tag-button" data-tag="applied-physics" data-group="type">Applied
 										Physics</button>
+										<button class="tag-button" data-tag="swarm-intelligence" data-group="type">Swarm
+											Intelligence</button>
+											<button class="tag-button" data-tag="games" data-group="type">Games</button>
+											<button class="tag-button" data-tag="digital-twin" data-group="type">Digital Twins</button>
 									<!-- Add more project type tags if needed -->
 								</div>
 								</div>
@@ -73,7 +74,7 @@
 											Clouds</button>
 										<button class="tag-button" data-tag="webdev"
 											data-group="technology">WebDev</button>
-										<button class="tag-button" data-tag="sql" data-group="technology">SQL</button>
+										<button class="tag-button" data-tag="databases" data-group="technology">Databases</button>
 										<button class="tag-button" data-tag="chatgpt"
 											data-group="technology">ChatGPT</button>
 										<button class="tag-button" data-tag="fortran"
@@ -109,9 +110,10 @@
 								<h2>My Portfolio</h2>
 							</header>
 
-							<div class="portfolio-grid">	
+							<div class="portfolio-grid">
+								<div class="grid-sizer"></div>	
 								<div class="gutter-sizer"></div>			
-									<section class="box" data-tags="games modding unity">
+									<section class="box" data-tags="games">
 										<a class="image featured">
 											<img src="images/MandarinaVoidCut.png" alt="Slay the Spire Mod Poster" />
 										</a>
@@ -139,13 +141,8 @@
 											</ul>
 										</footer>
 									</section>
-								
 							
-								
-
-							
-							
-									<section class="box" data-tags="unity vr">
+									<section class="box" data-tags="digital-twin unity vr">
 										<a class="video featured">
 											<video controls poster="images/VRexplode_Poster.png" width="100%"
 												height="auto" loop muted aria-label="VR training environment video">
@@ -160,24 +157,25 @@
 										<p>
 											Developed a VR simulation environment used as a virtual meeting space. 
 											Focus was put on realistic physics and intuitive interactions, f.i. when moving, grabbing objects, teleporting, receiving haptic responses.
-											Some other areas this project allowed me to explore were multi-user development and voice-chat.
+											Some other areas this project allowed me to explore were multi-user development and voice-chat. Especifically,
+											Unity's Netcode for GameObjects and Vivox were used, along with Lobby and Relay to handle the different user rooms and connection.
 										</p>
 									</div>
 									<button class="read-more-button" style="display:none;">Read More</button>	
 									</section>
 
 							
-									<section class="box" data-tags="unity mesh-manipulation">
+									<section class="box" data-tags="digital-twin unity applied-physics">
 										<a class="video featured">
-											<video controls poster="images/MeshManipulationPoster.png" width="100%"
+											<video controls poster="images/meshgenerationDemoPoster.png" width="100%"
 												height="auto" loop muted
 												aria-label="Mesh manipulation demonstration video">
-												<source data-src="images/MeshManipulationDemo.mp4" type="video/mp4">
+												<source data-src="images/shotcreteDemo.mp4" type="video/mp4">
 												Your browser does not support the video tag.
 											</video>
 										</a>
 										<header>
-											<h3>Dynamic Mesh Editing Tool</h3>
+											<h3>Parallel Mesh handling and viscous fluid simulation</h3>
 										</header>
 										<div class="text-content">
 										<p>
@@ -190,12 +188,12 @@
 									<button class="read-more-button" style="display:none;">Read More</button>	
 									</section>
 						
-									<section class="box" data-tags="unity applied-physics simulation">
+									<section class="box" data-tags="unreal-engine unity simulation">
 										<a class="video featured">
-											<video controls poster="images/UnityCarlaPoster.png" width="100%"
+											<video controls poster="images/CarlaDrivingPoster.png" width="100%"
 												height="auto" loop muted
 												aria-label="Unity-CARLA autonomous driving simulation video">
-												<source data-src="images/UnityCarlaDemo.mp4" type="video/mp4">
+												<source data-src="images/CarlaUnitySideBySide.mp4" type="video/mp4">
 												Your browser does not support the video tag.
 											</video>
 										</a>
@@ -212,7 +210,7 @@
 									<button class="read-more-button" style="display:none;">Read More</button>	
 									</section>
 						
-									<section class="box" data-tags="ros unity">
+									<section class="box" data-tags="digital-twin ros unity">
 										<a class="video featured">
 											<video controls poster="images/ROSConnectionPoster.png" width="100%"
 												height="auto" loop muted
@@ -222,7 +220,7 @@
 											</video>
 										</a>
 										<header>
-											<h3>ROS-Integrated Robotic Control System</h3>
+											<h3>ROS-Integrated Robot Control System</h3>
 										</header>
 										<div class="text-content">
 										<p>
@@ -255,14 +253,14 @@
 										<footer>
 											<ul class="actions">
 												<li><a class="icon brands fa-github"
-														href="https://github.com/GonzaloGuarner/CrossStitchApp"><span
+														href="https://github.com/GonzaloGuarner/Cross-Stitch.git"><span
 															class="label">Github</span></a></li>
 											</ul>
 										</footer>
 									</section>
 
 
-									<section class="box" data-tags="chatgpt sql unity">
+									<section class="box" data-tags="chatgpt databases unity">
 										<a class="video featured">
 											<video controls poster="images/SecondBrain.png" width="100%" height="auto"
 												loop muted>
@@ -271,8 +269,7 @@
 											</video>
 										</a>
 										<header>
-											<h3>The Second Brain:</h3>
-											<h4> An AI safety project.</p>
+											<h3>The Second Brain: An AI safety project.</h3>
 										</header>
 										<div class="text-content">
 										<p>
@@ -486,66 +483,62 @@
 			</div>
 		</section>
 
-		<!-- Footer -->
-		<section id="footer">
-			<div class="container">
-				<div class="col-4 col-12-medium">
-					<section>
-						<ul class="social">
-							<li><a class="icon brands fa-linkedin-in"
-									href="https://www.linkedin.com/in/gonzalo-guarner/"><span
-										class="label">LinkedIn</span></a></li>
-							<li><a class="icon brands fa-github" href="https://github.com/GonzaloGuarner"><span
-										class="label">Github</span></a></li>
-						</ul>
-						<ul class="contact">
-							<li>
-								<h3>Location</h3>
-								<p>
-									Barcelona, ES 08005
-								</p>
-							</li>
-							<li>
-								<h3>Mail</h3>
-								<p><a href="mailto:gonzaloguarner@gmail.com">gonzaloguarner@gmail.com</a></p>
-							</li>
-							<li>
-								<h3>Phone</h3>
-								<p>(+34) 606-785-052</p>
-							</li>
-						</ul>
-					</section>
-				</div>
-				<div class="col-12">
-
-					<!-- Copyright -->
-					<div id="copyright">
-						<ul class="links">
-							<li>&copy; GG. All rights reserved.</li>
-							<li>By: <a>Gonzalo Guarner-Bañares</a></li>
-						</ul>
-					</div>
-
-				</div>
+<!-- Footer -->
+<section id="footer">
+	<div class="container footer-flex">
+	  <div class="footer-left">
+		<ul class="contact">
+		  <li>
+			<h3>Location</h3>
+			<p>Barcelona, ES 08005</p>
+		  </li>
+		  <li>
+			<h3>Mail</h3>
+			<p><a href="mailto:gonzaloguarner@gmail.com">gonzaloguarner@gmail.com</a></p>
+		  </li>
+		</ul>
+	  </div>
+	  <div class="footer-middle">
+		<div class="col-12">
+			<div id="copyright">
+			  <ul class="links">
+				<li>&copy; GG. All rights reserved.</li>
+			  </ul>
 			</div>
-		</section>
+		  </div>
+	  </div>
+	  <div class="footer-right">
+		<ul class="social">
+		  <li><a class="icon brands fa-linkedin-in" 
+				 href="https://www.linkedin.com/in/gonzalo-guarner/">
+			<span class="label">LinkedIn</span></a></li>
+		  <li><a class="icon brands fa-github" 
+				 href="https://github.com/GonzaloGuarner">
+			<span class="label">Github</span></a></li>
+		</ul>
+	  </div>
+	</div>
+  </section>
+  
 
 	</div>
 
 	<!-- Scripts -->
 
-	<script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.min.js"></script>
-	<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/browser.min.js"></script>
 	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/readmore.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
 	<script src="assets/js/lazyloading.js"></script>
 	<script src="assets/js/tagsystem.js"></script>
-	<script src="assets/js/readmore.js"></script>
+	<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+	<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 	<script src="assets/js/masonlayout.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.min.js"></script>
 	<script src="assets/js/swarmbackground.js"></script>
+
 
 
 </body>
