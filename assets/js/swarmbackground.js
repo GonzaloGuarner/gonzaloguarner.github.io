@@ -105,6 +105,9 @@ class Fish {
       steering.sub(this.velocity);
       steering.limit(this.maxForce);
     }
+    let jitter = p5.Vector.random2D().mult(0.2); 
+    // 0.05 is the strength of the jitter; tweak up/down.
+    steering.add(jitter);
     return steering;
   }
 

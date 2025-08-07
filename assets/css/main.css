@@ -2206,7 +2206,7 @@ ul.social li a:before {
 	font-size: 2em;
 	line-height: 1.5em;
 }
-ul.social li a.fa-github,a.fa-steam {
+ul.social li a.fa-github,a.fa-steam,a.fa-hourglass {
 	background: #888;
 }
 ul.social li a.fa-github:hover,a.fa-steam:hover {
