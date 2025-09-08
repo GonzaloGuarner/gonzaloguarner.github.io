@@ -113,15 +113,20 @@
 					<div class="grid-sizer"></div>
 					<div class="gutter-sizer"></div>
 					<section class="box" data-tags="games">
-						<a class="image featured">
-							<img src="images/MandarinaVoidCut.png" alt="Slay the Spire Mod Poster" />
-						</a>
+<a class="image featured" id="mandarina-slideshow"
+   data-slides='[
+      {"type":"image","src":"images/mandarina/MandarinaVoidCut.png","alt":"Mandarina Mod Poster","interval":3000},
+      {"type":"image","src":"images/mandarina/MandarinaShot.png","alt":"Mandarina Mod Card","interval":3000},
+      {"type":"image","src":"images/mandarina/MandarinaCards.png","alt":"Mandarina Mod Cards Showcase","interval":3000},
+      {"type":"video","src":"images/mandarina/MandarinaShowcase.mp4","poster":"images/mandarina/VideoPoster.png","interval":11100}
+   ]'>
+</a>
 						<header>
-							<h3>Slay the Spire: The Mandarina Mod</h3>
+							<h3>Slay the Spire: The Volatile Mod</h3>
 						</header>
 						<div class="text-content">
 							<p>
-								The <strong>Mandarina Mod</strong> for Slay the Spire was an opportunity to combine
+								The <strong>Volatile Mod</strong> for Slay the Spire was an opportunity to combine
 								my passion for game design with practical programming skills.
 								It features a new playable character, custom mechanics, visual and sound FX, and
 								innovative card interactions designed to expand the game's strategic depth.
@@ -148,8 +153,8 @@
 											class="button alt" target="_blank">Out on Steam Workshop</a></li>
 								</div>
 								<div class="right-icons">
-									<li><a class="icon brands fa-steam"
-											href="https://github.com/GonzaloGuarner/SnakeCubeSolver.git"><span
+									<li><a class="icon brands fa-github"
+											href="https://github.com/GonzaloGuarner/MandarinaMod.git"><span
 												class="label">Steam</span></a></li>
 								</div>
 							</ul>
@@ -329,17 +334,13 @@
 					</section>
 
 					<section class="box" data-tags="games unity">
-						<a class="image featured"><img src="images/ZigZagPause.png" alt="" id="image" /></a>
-						<script type="text/javascript">
-
-							let image = document.getElementById('image');
-							let images = ["images/ZigZagMenu.png", "images/ZigZagGameplay.png", "images/ZigZagPause.png"];
-							let imageIndex = 0;
-							setInterval(function () {
-								image.src = images[imageIndex];
-								imageIndex = (imageIndex + 1) % (images.length);
-							}, 3000);
-						</script>
+					<a class="image featured" id="zigzag-slideshow"
+					data-slides='[
+						{"type":"image","src":"images/ZigZagMenu.png","alt":"ZigZag Menu","interval":3000},
+						{"type":"image","src":"images/ZigZagGameplay.png","alt":"ZigZag Gameplay","interval":3000},
+						{"type":"image","src":"images/ZigZagPause.png","alt":"ZigZag Pause","interval":3000}
+					]'>
+					</a>
 						<header>
 							<h3>Zig Zag Pro</h3>
 						</header>
@@ -569,6 +570,8 @@
 	<script src="assets/js/main.js"></script>
 	<script src="assets/js/lazyloading.js"></script>
 	<script src="assets/js/tagsystem.js"></script>
+	<script src="assets/js/slideshow.js"></script>
+
 	<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
 	<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 	<script src="assets/js/masonlayout.js"></script>
